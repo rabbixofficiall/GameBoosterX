@@ -1,0 +1,173 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0F14">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GAME BOOSTER SETTINGS"
+            android:textColor="#00F5D4"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A22"
+            android:padding="16dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DPI Control"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/dpiInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter DPI (example 480)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#7A8A99"
+                android:inputType="number"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#00F5D4" />
+
+            <Button
+                android:id="@+id/applyDpiButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apply DPI"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/resetDpiButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reset DPI"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A22"
+            android:padding="16dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Network Boost"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/cloudflareDnsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use Cloudflare DNS"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/googleDnsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use Google DNS"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/disableDnsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disable Private DNS"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A22"
+            android:padding="16dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart Optimization"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/dynamicSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dynamic Optimization"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp" />
+
+            <Switch
+                android:id="@+id/touchSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Touch Boost"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/optimizeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Run Optimization"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A22"
+            android:padding="16dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cleaner Tools"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/junkCleanButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clean Junk Files"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/hiddenCacheButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scan Hidden Cache"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
