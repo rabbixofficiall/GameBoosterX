@@ -2,11 +2,13 @@
     package="com.rabby.gamebooster">
 
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
     <application
         android:allowBackup="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
 
+        <activity android:name=".presentation.ui.settings.SettingsActivity" />
         <activity android:name=".presentation.ui.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
