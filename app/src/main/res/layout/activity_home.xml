@@ -13,6 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"/>
 
+    <Button
+        android:id="@+id/settingsButton"
+        android:text="OPEN SETTINGS"
+        android:textColor="#00F5D4"
+        android:background="#141A22"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_marginTop="16dp"
