@@ -1,7 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0F14">
+    android:background="@drawable/bg_main_gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,16 +14,23 @@
             android:layout_height="wrap_content"
             android:text="GAME BOOSTER SETTINGS"
             android:textColor="#00F5D4"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cyberpunk control and optimization panel"
+            android:textColor="#8EA2B4"
+            android:textSize="13sp"
             android:layout_marginBottom="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#141A22"
-            android:padding="16dp"
+            android:background="@drawable/bg_cyber_card"
             android:layout_marginBottom="14dp">
 
             <TextView
@@ -38,8 +45,11 @@
             <Button
                 android:id="@+id/requestShizukuButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="54dp"
                 android:text="Grant Shizuku Permission"
+                android:textAllCaps="false"
+                android:textColor="#031012"
+                android:background="@drawable/bg_primary_glow_button"
                 android:layout_marginTop="10dp" />
         </LinearLayout>
 
@@ -47,8 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#141A22"
-            android:padding="16dp"
+            android:background="@drawable/bg_cyber_card"
             android:layout_marginBottom="14dp">
 
             <TextView
@@ -67,28 +76,38 @@
                 android:textColor="#FFFFFF"
                 android:textColorHint="#7A8A99"
                 android:inputType="number"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#00F5D4" />
+                android:background="@drawable/bg_cyber_input"
+                android:padding="14dp"
+                android:layout_marginTop="10dp" />
 
             <Button
                 android:id="@+id/applyDpiButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="54dp"
                 android:text="Apply DPI"
+                android:textAllCaps="false"
+                android:textColor="#031012"
+                android:background="@drawable/bg_primary_glow_button"
                 android:layout_marginTop="10dp" />
 
             <Button
                 android:id="@+id/resetDpiButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Reset DPI"
+                android:textAllCaps="false"
+                android:textColor="#D7FFFA"
+                android:background="@drawable/bg_secondary_glow_button"
                 android:layout_marginTop="8dp" />
 
             <Button
                 android:id="@+id/currentDpiButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Read Current DPI"
+                android:textAllCaps="false"
+                android:textColor="#D7FFFA"
+                android:background="@drawable/bg_secondary_glow_button"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
@@ -96,8 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#141A22"
-            android:padding="16dp"
+            android:background="@drawable/bg_cyber_card"
             android:layout_marginBottom="14dp">
 
             <TextView
@@ -111,29 +129,41 @@
             <Button
                 android:id="@+id/cloudflareDnsButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Use Cloudflare DNS"
+                android:textAllCaps="false"
+                android:textColor="#031012"
+                android:background="@drawable/bg_primary_glow_button"
                 android:layout_marginTop="10dp" />
 
             <Button
                 android:id="@+id/googleDnsButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Use Google DNS"
+                android:textAllCaps="false"
+                android:textColor="#D7FFFA"
+                android:background="@drawable/bg_secondary_glow_button"
                 android:layout_marginTop="8dp" />
 
             <Button
                 android:id="@+id/disableDnsButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Disable Private DNS"
+                android:textAllCaps="false"
+                android:textColor="#D7FFFA"
+                android:background="@drawable/bg_secondary_glow_button"
                 android:layout_marginTop="8dp" />
 
             <Button
                 android:id="@+id/dnsStateButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Read DNS State"
+                android:textAllCaps="false"
+                android:textColor="#D7FFFA"
+                android:background="@drawable/bg_secondary_glow_button"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
@@ -141,8 +171,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#141A22"
-            android:padding="16dp"
+            android:background="@drawable/bg_cyber_card"
             android:layout_marginBottom="14dp">
 
             <TextView
@@ -172,8 +201,11 @@
             <Button
                 android:id="@+id/optimizeButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Run Optimization"
+                android:textAllCaps="false"
+                android:textColor="#031012"
+                android:background="@drawable/bg_primary_glow_button"
                 android:layout_marginTop="10dp" />
         </LinearLayout>
 
@@ -181,8 +213,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#141A22"
-            android:padding="16dp"
+            android:background="@drawable/bg_cyber_card"
             android:layout_marginBottom="14dp">
 
             <TextView
@@ -196,15 +227,21 @@
             <Button
                 android:id="@+id/junkCleanButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Clean Junk Files"
+                android:textAllCaps="false"
+                android:textColor="#031012"
+                android:background="@drawable/bg_primary_glow_button"
                 android:layout_marginTop="10dp" />
 
             <Button
                 android:id="@+id/hiddenCacheButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:text="Scan Hidden Cache"
+                android:textAllCaps="false"
+                android:textColor="#D7FFFA"
+                android:background="@drawable/bg_secondary_glow_button"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
