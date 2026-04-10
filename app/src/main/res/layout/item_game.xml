@@ -1,14 +1,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="16dp"
-    android:background="#141A22"
-    android:layout_marginBottom="10dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_game_item"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Name"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/gamePackage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="com.example.game"
+        android:textColor="#7BECDD"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/gameHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to boost and launch"
+        android:textColor="#8FA3B4"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp" />
 </LinearLayout>
