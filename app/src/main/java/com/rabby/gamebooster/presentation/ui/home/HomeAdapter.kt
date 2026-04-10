@@ -20,12 +20,15 @@ class HomeAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val game = list[position]
+
         holder.binding.gameName.text = game.name
+        holder.binding.gamePackage.text = game.packageName
+        holder.binding.gameHint.text = "Tap to boost and launch"
 
         holder.binding.root.setOnClickListener {
             onClick(game)
         }
     }
 
-    override fun getItemCount() = list.size
+    override fun getItemCount(): Int = list.size
 }
