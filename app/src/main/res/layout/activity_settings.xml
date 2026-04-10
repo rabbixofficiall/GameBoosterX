@@ -27,6 +27,31 @@
             android:layout_marginBottom="14dp">
 
             <TextView
+                android:id="@+id/shizukuStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shizuku Status: Checking..."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/requestShizukuButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grant Shizuku Permission"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#141A22"
+            android:padding="16dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DPI Control"
@@ -57,6 +82,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Reset DPI"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/currentDpiButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Read Current DPI"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
@@ -95,6 +127,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Disable Private DNS"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/dnsStateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Read DNS State"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
 
