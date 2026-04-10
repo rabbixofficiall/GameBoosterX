@@ -1,39 +1,22 @@
 package com.rabby.gamebooster.core.dpi
 
-import android.content.Context
-import java.io.DataOutputStream
+import com.rabby.gamebooster.core.shizuku.ShizukuHelper
 
 object DpiManager {
 
-    fun changeDpiWithShizukuOrRoot(context: Context, dpi: Int): Boolean {
-        return try {
-            val process = Runtime.getRuntime().exec("sh")
-            val outputStream = DataOutputStream(process.outputStream)
-
-            outputStream.writeBytes("wm density $dpi\n")
-            outputStream.writeBytes("exit\n")
-            outputStream.flush()
-
-            process.waitFor() == 0
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
+    fun applyDpi(dpi: Int): Pair<Boolean, String> {
+        if (dpi < 200 || dpi > 800) {
+            return false to "Use DPI between 200 and 800"
         }
+
+        return ShizukuHelper.runShellCommand("wm density $dpi")
     }
 
-    fun resetDpi(context: Context): Boolean {
-        return try {
-            val process = Runtime.getRuntime().exec("sh")
-            val outputStream = DataOutputStream(process.outputStream)
+    fun resetDpi(): Pair<Boolean, String> {
+        return ShizukuHelper.runShellCommand("wm density reset")
+    }
 
-            outputStream.writeBytes("wm density reset\n")
-            outputStream.writeBytes("exit\n")
-            outputStream.flush()
-
-            process.waitFor() == 0
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
+    fun readCurrentDpi(): Pair<Boolean, String> {
+        return ShizukuHelper.runShellCommand("wm density")
     }
 }
