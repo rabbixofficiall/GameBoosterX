@@ -1,30 +1,52 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#0D1117"
-    android:padding="16dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+package com.rabby.gamebooster.presentation.ui.home
 
-    <Button
-        android:id="@+id/boostButton"
-        android:text="BOOST NOW"
-        android:textColor="#00E676"
-        android:background="#141A22"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"/>
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.rabby.gamebooster.R
+import com.rabby.gamebooster.domain.usecase.BoostGameUseCase
+import com.rabby.gamebooster.presentation.ui.settings.SettingsActivity
+import com.rabby.gamebooster.presentation.viewmodel.HomeViewModel
 
-    <Button
-        android:id="@+id/settingsButton"
-        android:text="OPEN SETTINGS"
-        android:textColor="#00F5D4"
-        android:background="#141A22"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="10dp"/>
+class HomeActivity : AppCompatActivity() {
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_marginTop="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var boostButton: Button
+    private lateinit var settingsButton: Button
+
+    private val viewModel = HomeViewModel()
+    private val boostUseCase = BoostGameUseCase()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+
+        recyclerView = findViewById(R.id.recyclerView)
+        boostButton = findViewById(R.id.boostButton)
+        settingsButton = findViewById(R.id.settingsButton)
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val adapter = HomeAdapter(viewModel.getGames()) { game ->
+            boostUseCase.execute(this)
+
+            val intent = packageManager.getLaunchIntentForPackage(game.packageName)
+            if (intent != null) {
+                startActivity(intent)
+            }
+        }
+
+        recyclerView.adapter = adapter
+
+        boostButton.setOnClickListener {
+            boostUseCase.execute(this)
+        }
+
+        settingsButton.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+        }
+    }
+}
